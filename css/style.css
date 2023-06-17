@@ -1,0 +1,67 @@
+/*   File: style.css
+     GUI Assignment: Creating an Interactive Dynamic Table
+     Author: Benjamin Jancsy
+     Created: June 16, 2023
+     Dynamically creates a custom multiplication table, validating user input and diplaying
+     helpful error messages. Includes useful UI features such as reset input and clear table buttons.
+     Copyright (c)  2023 by Ben.
+     References: w3schools.com */
+body { /* body color */
+    background-color: rgb(220, 220, 195);
+}
+h2 { /* welcome message */
+    height: 15px;
+    color: rgb(118, 49, 17);
+    font-family: 'Helvetica';
+}
+h3 { /* instruction for user */
+    height: 15px;
+    color: rgb(87, 80, 11);
+    font-family: 'Arial';
+}
+main {
+    margin: auto;
+    text-align: center;
+}
+#tablediv { /* Div that holds the table */
+    max-height: 60vh;
+    width: 60%;
+    margin: 10px auto;
+    overflow-y: auto;  /* make it scroll */
+    overflow-x: auto;
+}
+table, td, th {
+    border: 1px double black;
+}
+table {
+    margin: 0 auto;
+}
+th {/* contrast for table head */
+    background-color: black;
+    color: white;
+}
+input, label {/* make the form look nice */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#submit, #reset, #clear {/* fancy buttons! */
+    background-color: transparent;
+    height: 30px;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+}
+#errordiv {/* div that holds all the error messages */
+    color: red;
+    font-weight: bold;
+}
+span { /* says and */
+    font-style: italic;
+}
+th { /* Makes the table headers stick upon scroll */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10; /* brings to front */
+}
