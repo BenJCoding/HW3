@@ -1,0 +1,44 @@
+<!-- File: index.html
+     GUI Assignment: Creating an Interactive Dynamic Table
+     Author: Benjamin Jancsy
+     Created: June 16, 2023
+     Dynamically creates a custom multiplication table, validating user input and diplaying
+     helpful error messages. Includes useful UI features such as reset input and clear table buttons.
+     Copyright (c)  2023 by Ben.
+     References: w3schools.com -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./images/favicon.png" /><!-- Preview card for link share -->
+    <title>My Website</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon"><!-- custom icon -->
+  </head>
+  <body>
+    <main>
+        <h2>HW 3 - Dynamic Multiplication Table</h2>
+        <h3>Enter the number ranges for the table:</h3>
+        <form onsubmit="return false"><!-- Keeps data persistent upon submit -->
+          <label for="lowcol">From</label>
+          <input type="text" id="lowcol"  class="ranges" name="lowcol">
+          <label for="highcol">through</label>
+          <input type="text" id="highcol" class="ranges" name="highcol">
+          <br>
+          <span>and</span>
+          <br>
+          <label for="lowrow">From</label>
+          <input type="text" id="lowrow" class="ranges" name="lowrow">
+          <label for="highrow">through</label>
+          <input type="text" id="highrow" class="ranges" name="highrow">
+          <div id="errordiv"></div><!-- Error messages here -->
+          <input type="submit" id="submit" value="Submit"><!-- User convenience -->
+          <input type="reset" id="reset"><!-- User convenience -->
+          <input type="button" id="clear" value="Clear Table"><!-- User convenience -->
+        </form>
+        <div id="tablediv"></div><!-- Table goes here -->
+    </main>
+	<script src="./js/script.js"></script>
+  </body>
+</html>
